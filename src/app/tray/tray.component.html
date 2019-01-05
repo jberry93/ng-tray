@@ -1,0 +1,11 @@
+<div class="tray" [class.triggered]="trigger === true">
+    <button (click)="clickTrayBtn()" class="tray-btn">
+        <i class="fas fa-cog fa-spin"></i>
+    </button>
+    <div class="tray-content">
+        <button (click)="clickTrayBtn()" class="close-tray-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <h5 class="tray-header">Tray Title</h5>
+    </div>
+</div>

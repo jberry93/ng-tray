@@ -1,0 +1,76 @@
+$tray-btn-color: #6967ce;
+$border-color: #cfd8dc;
+$tray-background-color: #ffffff;
+
+.triggered {
+    right: 0 !important;
+}
+
+.tray {
+    right: 0;
+    border-left: 1px solid $border-color;
+    position: fixed;
+    z-index: 1051;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    right: -400px;
+    height: 100vh;
+    padding: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    transition: right 0.4s cubic-bezier(0.05, 0.74, 0.2, 0.99);
+
+    .tray-btn {
+        display: block;
+        background-color: $tray-btn-color;
+        border-radius: 8px 0 0 8px;
+        color: #ffffff;
+        border: 0;
+        line-height: 56px;
+        position: absolute;
+        top: 35%;
+        left: -54px;
+        width: 54px;
+        height: 50px;
+        cursor: pointer;
+        text-align: center;
+        outline: none;
+        transition: 0.5s;
+    
+        &:hover {
+            background-color: darken($tray-btn-color, 15%);
+        }
+    
+        .fa-cog {
+            font-size: 18px;
+        }
+    }
+    
+    .tray-content {
+        position: relative;
+        overflow-y: scroll;
+        height: 100%;
+        background-color: $tray-background-color;
+        padding: 20px;
+
+        .close-tray-btn {
+            position: absolute;
+            z-index: 10;
+            top: 10px;
+            right: 10px;
+            width: auto;
+            padding: 7px;
+            border: 0;
+            outline: none;
+            background-color: transparent;
+            color: #000000;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .tray-header {
+            font-size: 16px;
+        }
+    }
+}
